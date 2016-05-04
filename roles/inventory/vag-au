@@ -1,2 +1,0 @@
-[vag-au]
-vag-au	ansible_ssh_host=10.100.13.44	ansible_ssh_port=6666
