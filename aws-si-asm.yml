@@ -1,3 +1,11 @@
+
+ - name: AWS specifics
+   hosts: aws
+   connection: local
+   user: root
+   roles:
+      - aws-init
+
  - name: Host configuration
    hosts: aws
    connection: local
