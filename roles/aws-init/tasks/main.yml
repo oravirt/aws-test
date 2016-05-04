@@ -1,0 +1,13 @@
+---
+# tasks file for aws-init
+
+
+  - name: Add swapfile
+    shell: "dd if=/dev/zero of=/var/tmp/swap1 bs=1M count=2000"
+    become: true
+
+  - name: Enable swapfile
+    shell: "mkswap /var/tmp/swap1; swapon /var/tmp/swap1"
+    become: true
+
+

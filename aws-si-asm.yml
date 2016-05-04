@@ -1,0 +1,26 @@
+ - name: Host configuration
+   hosts: aws
+   connection: local
+   user: root
+   roles:
+      - common
+      - orahost
+      - orahost-storage
+
+ - name: Oracle Grid Infrastructure installation & ASM Configuration
+   hosts: aws
+   connection: local
+   user: root
+   roles:
+      - oraswgi-install
+      - oraasm-createdg
+
+ - name: Database Server Installation & Database Creation
+   hosts: aws
+   connection: local
+   user: root
+   roles:
+      - oraswdb-install
+      - oradb-create
+      - cxoracle
+
